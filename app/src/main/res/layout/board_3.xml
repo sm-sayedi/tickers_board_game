@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell00"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintBottom_toTopOf="@+id/cell10"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/cell01"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/cell10" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/custom_background"
+
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/cell02"
+        app:layout_constraintStart_toEndOf="@+id/cell00"
+        app:layout_constraintTop_toTopOf="@+id/cell00" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell02"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/cell12"
+        app:layout_constraintStart_toEndOf="@id/cell01"
+        app:layout_constraintTop_toTopOf="@+id/cell01" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/cell11"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/cell12"
+        app:layout_constraintStart_toEndOf="@+id/cell10"
+        app:layout_constraintTop_toTopOf="@+id/cell10" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cell11"
+        app:layout_constraintTop_toTopOf="@+id/cell11" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/cell21"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/cell10"
+        app:layout_constraintTop_toBottomOf="@+id/cell10" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell21"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/cell22"
+        app:layout_constraintStart_toEndOf="@+id/cell20"
+        app:layout_constraintTop_toTopOf="@+id/cell20" />
+
+    <com.smsayedi.tickers.Cell
+        android:id="@+id/cell22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/custom_background"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/cell12"
+        app:layout_constraintStart_toEndOf="@id/cell21"
+        app:layout_constraintTop_toTopOf="@+id/cell21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.500684" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdTimer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayer1"
+        app:layout_constraintStart_toStartOf="@+id/tvPlayer1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondary"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvMins1"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv11"
+                app:layout_constraintEnd_toStartOf="@+id/tv11" />
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text=":"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvSecs1"
+                app:layout_constraintEnd_toStartOf="@+id/tvSecs1" />
+
+            <TextView
+                android:id="@+id/tvSecs1"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text=":"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvSecs1"
+                app:layout_constraintStart_toEndOf="@+id/tvSecs1" />
+
+            <TextView
+                android:id="@+id/tvCenti1"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv12"
+                app:layout_constraintStart_toEndOf="@+id/tv12" />
+
+            <ImageView
+                android:id="@+id/indicator0"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSecs1"
+                app:srcCompat="@drawable/ticker0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdTimer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayer2"
+        app:layout_constraintEnd_toEndOf="@+id/tvPlayer2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondary"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvMins2"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv21"
+                app:layout_constraintEnd_toStartOf="@+id/tv21" />
+
+            <TextView
+                android:id="@+id/tv21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text=":"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvSecs2"
+                app:layout_constraintEnd_toStartOf="@+id/tvSecs2" />
+
+            <TextView
+                android:id="@+id/tvSecs2"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text=":"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvSecs2"
+                app:layout_constraintStart_toEndOf="@+id/tvSecs2" />
+
+            <TextView
+                android:id="@+id/tvCenti2"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv22"
+                app:layout_constraintStart_toEndOf="@+id/tv22" />
+
+            <ImageView
+                android:id="@+id/indicator1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSecs2"
+                app:srcCompat="@drawable/ticker1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvP1Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="3"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/cdTimer1"
+        app:layout_constraintStart_toEndOf="@+id/cdTimer1"
+        app:layout_constraintTop_toTopOf="@+id/cdTimer1" />
+
+    <TextView
+        android:id="@+id/tvP2Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="3"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/cdTimer2"
+        app:layout_constraintEnd_toStartOf="@+id/cdTimer2"
+        app:layout_constraintTop_toTopOf="@+id/cdTimer2" />
+
+    <ImageView
+        android:id="@+id/imgTimer1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/cdTimer1"
+        app:layout_constraintEnd_toEndOf="@+id/cdTimer1"
+        app:layout_constraintStart_toStartOf="@+id/cdTimer1"
+        app:layout_constraintTop_toTopOf="@+id/cdTimer1"
+        app:srcCompat="@drawable/timer" />
+
+    <ImageView
+        android:id="@+id/imgTimer2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/cdTimer2"
+        app:layout_constraintEnd_toEndOf="@+id/cdTimer2"
+        app:layout_constraintStart_toStartOf="@+id/cdTimer2"
+        app:layout_constraintTop_toTopOf="@+id/cdTimer2"
+        app:srcCompat="@drawable/timer" />
+
+    <TextView
+        android:id="@+id/tvPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Player 1"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/cell00"
+        app:layout_constraintStart_toStartOf="@+id/cell00" />
+
+    <TextView
+        android:id="@+id/tvPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Player 2"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/cell02"
+        app:layout_constraintEnd_toEndOf="@+id/cell02" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
